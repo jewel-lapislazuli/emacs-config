@@ -9,3 +9,6 @@
 (define-key ac-menu-map (kbd "C-n") 'ac-next)
 (define-key ac-menu-map (kbd "C-p") 'ac-previous)
 
+; auto-complete-modeを適用する環境を追加
+(add-to-list 'ac-modes 'web-mode)
+(add-to-list 'ac-modes 'scss-mode)
