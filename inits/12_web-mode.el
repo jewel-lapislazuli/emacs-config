@@ -13,7 +13,7 @@
 			      auto-mode-alist))
 
 ; インデントの設定
-(defun web-mode-hook ()
+(defun my-web-mode-hook ()
   "Hooks for Web mode."
   (setq web-mode-html-offset 2)
   (setq web-mode-css-offset 2)
@@ -21,10 +21,17 @@
   (setq web-mode-php-offset 4)
   (setq web-mode-java-offset 4)
   (setq web-mode-asp-offset 2))
-(add-hook 'web-mode-hook 'web-mode-hook)
+(add-hook 'web-mode-hook 'my-web-mode-hook)
 
 ;; 色の設定
 ; HTML
 (set-face-attribute 'web-mode-html-tag-face nil :foreground "yellow")
 (set-face-attribute 'web-mode-html-tag-bracket-face nil :foreground "white")
 (set-face-attribute 'web-mode-html-attr-name-face nil :foreground "CadetBlue2")
+
+;; web-modeの動作設定
+; Auto-pairingを有効にする
+(setq web-mode-enable-auto-pairing t)
+
+; C-c / で閉じタグを挿入
+(define-key web-mode-map (kbd "C-c /") 'web-mode-element-close)
