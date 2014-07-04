@@ -7,3 +7,6 @@
 
 (depends-on "scss-mode" :git "https://github.com/antonj/scss-mode.git")
 (depends-on "web-mode" :git "https://github.com/fxbois/web-mode.git")
+
+(depends-on "ruby-block")
+(depends-on "ruby-electric" :git "https://github.com/qoobaa/ruby-electric.git")
