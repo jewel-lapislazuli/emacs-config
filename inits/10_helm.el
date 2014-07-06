@@ -1,10 +1,11 @@
 ;; emacs-helmの設定
 (require 'helm-config)
 
-; helm用キーバインド
+; helm-mode呼び出しの設定
 (global-set-key (kbd "C-c C-h") 'helm-mini)
 (global-set-key (kbd "C-c C-c") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-x C-r") 'helm-for-files)
 
 ; C-c C-cがpython-modeのキーバインドと重複しているので対処
 (add-hook 'python-mode-hook
@@ -25,6 +26,8 @@
 
 ; helmのファイルパス自動補完機能を無効にする
 (custom-set-variables '(helm-ff-auto-update-initial-value nil))
+
 ; TABで補完できるようにする。
-; (define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
+(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
+(define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 
