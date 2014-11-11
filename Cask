@@ -1,12 +1,12 @@
 (source gnu)
 (source melpa)
 
-(depends-on "init-loader" :git "https://github.com/emacs-jp/init-loader.git")
-(depends-on "auto-complete" :git "https://github.com/auto-complete/auto-complete.git")
-(depends-on "emacs-helm" :git "https://github.com/emacs-helm/helm.git")
+(depends-on "init-loader")
+(depends-on "auto-complete")
+(depends-on "helm")
 
-(depends-on "scss-mode" :git "https://github.com/antonj/scss-mode.git")
-(depends-on "web-mode" :git "https://github.com/fxbois/web-mode.git")
+(depends-on "scss-mode")
+(depends-on "web-mode")
 
 (depends-on "ruby-block")
-(depends-on "ruby-electric" :git "https://github.com/qoobaa/ruby-electric.git")
+(depends-on "ruby-electric")
