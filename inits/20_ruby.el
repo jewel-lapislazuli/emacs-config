@@ -1,3 +1,9 @@
+; Gemfileをruby-modeで編集する
+(setq auto-mode-alist (append (list
+                               '("Gemfile$" . ruby-mode)
+                               )
+                              auto-mode-alist))
+
 ; ruby-blockの設定
 (require 'ruby-block)
 (ruby-block-mode t)
