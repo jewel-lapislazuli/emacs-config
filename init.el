@@ -4,5 +4,5 @@
 
 ; init-loader
 (require 'init-loader)
-(init-loader-load "~/.emacs.d/inits")
+(init-loader-load "~/.emacs.d/conf.d")
 
