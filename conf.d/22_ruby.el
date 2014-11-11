@@ -9,6 +9,11 @@
 (ruby-block-mode t)
 (setq ruby-block-highlight-toggle t)
 
-; ruby-electricの設定
-(require 'ruby-electric)
-(add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
+; ruby-endの設定
+(require 'ruby-end)
+(add-hook 'ruby-mode-hook
+          '(lambda ()
+             (abbrev-mode 1)
+             (electric-pair-mode t)
+             (electric-indent-mode t)
+             (electric-layout-mode t)))
