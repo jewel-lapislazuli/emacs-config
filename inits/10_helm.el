@@ -1,11 +1,11 @@
 ;; emacs-helmの設定
-(require 'helm-config)
+;; (require 'helm-config)
 
 ; helm-mode呼び出しの設定
 (global-set-key (kbd "C-c C-h") 'helm-mini)
 (global-set-key (kbd "C-c C-c") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "C-x C-r") 'helm-for-files)
+(global-set-key (kbd "C-x C-r") 'helm-recentf)
 
 ; C-c C-cがpython-modeのキーバインドと重複しているので対処
 (add-hook 'python-mode-hook
