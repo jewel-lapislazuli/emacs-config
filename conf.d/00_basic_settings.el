@@ -49,12 +49,17 @@
 (setq read-file-name-completion-ignore-case t)
 
 ; 括弧の補完
-(global-set-key (kbd "(") 'skeleton-pair-insert-maybe)
-(global-set-key (kbd "{") 'skeleton-pair-insert-maybe)
-(global-set-key (kbd "[") 'skeleton-pair-insert-maybe)
-(global-set-key (kbd "\"") 'skeleton-pair-insert-maybe)
-(global-set-key (kbd "\'") 'skeleton-pair-insert-maybe)
-(setq skeleton-pair 1)
+(defun electric-pair ()
+  "If at end of line, insert character pair without surrounding spaces.
+Otherwise, just insert the typed character."
+  (interactive)
+  (if (eolp) (let (parens-require-spaces) (insert-pair)) (self-insert-command 1)))
+
+(global-set-key (kbd "(") 'electric-pair)
+(global-set-key (kbd "{") 'electric-pair)
+(global-set-key (kbd "[") 'electric-pair)
+(global-set-key (kbd "\"") 'electric-pair)
+(global-set-key (kbd "\'") 'electric-pair)
 
 ; 色の設定
 (set-face-foreground 'font-lock-comment-face "SlateGray")
