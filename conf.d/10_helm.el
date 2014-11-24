@@ -7,7 +7,7 @@
 (global-set-key (kbd "C-c C-c") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-x C-r") 'helm-recentf)
-(global-set-key (kbd "M-g .") 'helm-ag)
+(global-set-key (kbd "M-g a") 'helm-ag)
 
 ; helmでコマンド補完をできるようにする
 (helm-mode 1)
